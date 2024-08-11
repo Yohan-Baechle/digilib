@@ -1,60 +1,63 @@
+/* Importation du fichier CSS global */
+@import url('../global.css');
+
 /* Arrière-plan général pour la page de gestion des livres */
 .books-management {
     -fx-background-color: #F0F6FF;
 }
 
 /* Style pour la barre de recherche */
-.search_bar {
+.search-bar {
     -fx-background-color: #FFFFFF;
-    -fx-background-radius: 5;
-    -fx-padding: 10;
-    -fx-spacing: 10;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
     -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.07), 10, 0, 0, 5);
 }
 
 /* Icônes dans les boutons */
 .icon {
-    -fx-fill: #126AD3; /* Couleur de l'icône pour correspondre au thème général */
-    -fx-font-size: 20px; /* Taille de l'icône */
+    -fx-fill: #126AD3;
+    -fx-font-size: 20px;
 }
 
 /* Boutons d'action */
-.action_button {
-    -fx-background-color: #126AD3; /* Couleur de fond du bouton */
-    -fx-text-fill: white; /* Couleur du texte */
-    -fx-padding: 10 20; /* Padding interne du bouton */
-    -fx-font-size: 14px; /* Taille de la police du texte */
-    -fx-background-radius: 5;
+.action-button {
+    -fx-background-color: #126AD3;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
     -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.1), 10, 0, 0, 5);
 }
 
-.action_button:hover {
-    -fx-background-color: #0F5CAD; /* Couleur de fond au survol */
+.action-button:hover {
+    -fx-background-color: #0F5CAD;
 }
 
 /* Style du tableau de données */
-.data_table {
+.data-table {
     -fx-alternate-row-fill-visible: true;
     -fx-control-inner-background: white;
-    -fx-control-inner-background-alt: #f9f9f9; /* Couleur de ligne alternative */
-    -fx-background-radius: 5;
+    -fx-control-inner-background-alt: #f9f9f9;
+    -fx-background-radius: 5px;
     -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.07), 10, 0, 0, 5);
-    -fx-selection-bar: #126AD3; /* Couleur de sélection */
-    -fx-selection-bar-non-focused: #d9e9ff; /* Couleur de sélection quand non focussé */
+    -fx-selection-bar: #126AD3;
+    -fx-selection-bar-non-focused: #d9e9ff;
 }
 
-.data_table .column-header-background {
-    -fx-background-color: #126AD3; /* Couleur d'en-tête de colonne */
-    -fx-text-fill: white; /* Couleur du texte d'en-tête */
+.data-table .column-header-background {
+    -fx-background-color: #126AD3;
+    -fx-text-fill: white;
 }
 
-.data_table .table-column {
-    -fx-text-fill: #333; /* Couleur du texte dans les colonnes */
+.data-table .table-column {
+    -fx-text-fill: #333;
 }
 
-.data_table .table-cell {
-    -fx-padding: 10; /* Espacement interne des cellules */
-    -fx-text-fill: #333; /* Couleur du texte dans les cellules */
+.data-table .table-cell {
+    -fx-padding: 10px;
+    -fx-text-fill: #333;
 }
 
 /* Style des titres */
@@ -62,5 +65,5 @@
     -fx-font-size: 1.6em;
     -fx-text-fill: #4d5a68;
     -fx-font-weight: bold;
-    -fx-padding: 20 0;
+    -fx-padding: 20px 0;
 }

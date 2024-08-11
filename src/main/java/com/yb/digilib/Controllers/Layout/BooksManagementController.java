@@ -1,4 +1,4 @@
-package com.yb.digilib.Controllers;
+package com.yb.digilib.Controllers.Layout;
 
 public class BooksManagementController {
 }
