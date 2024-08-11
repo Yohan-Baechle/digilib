@@ -1,0 +1,45 @@
+/* Importation de la police Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Styles globaux */
+.root {
+    -fx-font-family: "Poppins", sans-serif;
+}
+
+/* Couleurs et styles réutilisables */
+.primary-bg {
+    -fx-background-color: #161931;
+}
+
+.secondary-bg {
+    -fx-background-color: #191D38;
+}
+
+.primary-text {
+    -fx-text-fill: #FFF;
+}
+
+.secondary-text {
+    -fx-text-fill: #4A5878;
+}
+
+.primary-button {
+    -fx-background-color: #1E90FF;
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 1.1em;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0.3, 0, 2);
+}
+
+.primary-button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #1C86EE;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.4, 0, 3);
+}
+
+.icon {
+    -fx-fill: #126AD3;
+    -fx-font-size: 20px;
+}

@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adbb758b-f844-4675-bb96-dac2f11b06bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/BooksManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/booksManagement.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/booksManagement.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styles/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/BooksManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/BooksManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Models/AppModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/booksManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/booksManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/sidebarMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/overview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/dashboardOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/login/loginForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/booksManagement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/booksManagement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/sidebarMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/overview.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/dashboardOverview.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/login/login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +82,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
       <recent name="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard" />
       <recent name="$PROJECT_DIR$/src/main/resources/fxml/layout/login" />
       <recent name="$PROJECT_DIR$/src/main/resources/styles/dashboard" />
       <recent name="$PROJECT_DIR$/src/main/resources/styles/login" />
-      <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
     </key>
   </component>
   <component name="RunManager">

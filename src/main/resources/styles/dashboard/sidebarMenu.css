@@ -1,57 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+/* Importation du fichier CSS global */
+@import url('../global.css');
 
-.main_menu_container {
+/* Styles pour la sidebar */
+.main-menu-container {
     -fx-background-color: #161931;
     -fx-alignment: center;
-    -fx-font-family: "Poppins", sans-serif;
     -fx-transition: all 0.3s ease;
 }
 
-.title_container {
+.title-container {
     -fx-background-color: #191D38;
-    -fx-padding: 10;
-    -fx-spacing: 10;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
     -fx-alignment: center;
 }
 
-.title_container FontAwesomeIconView {
+.title-container FontAwesomeIconView {
     -fx-fill: #736CC7;
 }
 
-.title_container Text {
+.title-container Text {
     -fx-fill: #FFF;
     -fx-font-size: 1.6em;
 }
 
-.menu_container {
-    -fx-padding: 20;
-    -fx-spacing: 20;
+.menu-container {
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
 }
 
-.menu_container Text {
+.menu-container Text {
     -fx-fill: #4A5878;
     -fx-font-size: 1em;
 }
 
-.menu_container Button {
+.menu-container Button {
     -fx-background-color: transparent;
     -fx-text-fill: #8A9BC8;
     -fx-font-size: 1.1em;
     -fx-alignment: center-left;
-    -fx-graphic-text-gap: 10;
-    -fx-padding: 10;
+    -fx-graphic-text-gap: 10px;
+    -fx-padding: 10px;
 }
 
-.menu_container Button:hover {
+.menu-container Button:hover {
     -fx-cursor: hand;
     -fx-text-fill: #FFF;
 }
 
-.menu_container Button:hover FontAwesomeIconView {
+.menu-container Button:hover FontAwesomeIconView {
     -fx-fill: #FFF;
 }
 
-.menu_container Button FontAwesomeIconView {
+.menu-container Button FontAwesomeIconView {
     -fx-fill: #8A9BC8;
 }
 
@@ -60,57 +61,57 @@
     -fx-vgrow: ALWAYS;
 }
 
-.alt_menu_btn {
-    -fx-pref-width: 164;
+.alt-menu-btn {
+    -fx-pref-width: 164px;
     -fx-background-color: #243447;
     -fx-text-fill: #FFF;
     -fx-font-size: 1.1em;
     -fx-alignment: center;
-    -fx-graphic-text-gap: 10;
+    -fx-graphic-text-gap: 10px;
 }
 
-.alt_menu_btn FontAwesomeIconView {
+.alt-menu-btn FontAwesomeIconView {
     -fx-fill: #FFF;
 }
 
-.alt_menu_btn:hover {
+.alt-menu-btn:hover {
     -fx-background-color: #1F2B3A;
     -fx-cursor: hand;
 }
 
-.logout_btn {
-    -fx-pref-width: 164;
+.logout-btn {
+    -fx-pref-width: 164px;
     -fx-background-color: #FF4136;
     -fx-text-fill: #FFF;
     -fx-font-size: 1.1em;
     -fx-alignment: center;
-    -fx-graphic-text-gap: 10;
+    -fx-graphic-text-gap: 10px;
 }
 
-.logout_btn FontAwesomeIconView {
+.logout-btn FontAwesomeIconView {
     -fx-fill: #FFF;
 }
 
-.logout_btn:hover {
+.logout-btn:hover {
     -fx-background-color: #E03B31;
     -fx-cursor: hand;
 }
 
-.help_support_btn {
-    -fx-pref-width: 260;
+.help-support-btn {
+    -fx-pref-width: 260px;
     -fx-background-color: #1E90FF;
     -fx-text-fill: #FFF;
     -fx-font-size: 1.1em;
     -fx-alignment: center;
-    -fx-graphic-text-gap: 10;
-    -fx-padding: 10;
+    -fx-graphic-text-gap: 10px;
+    -fx-padding: 10px;
 }
 
-.help_support_btn FontAwesomeIconView {
+.help-support-btn FontAwesomeIconView {
     -fx-fill: #FFF;
 }
 
-.help_support_btn:hover {
+.help-support-btn:hover {
     -fx-background-color: #1C86EE;
     -fx-cursor: hand;
 }

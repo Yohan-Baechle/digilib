@@ -1,29 +1,30 @@
+/* Importation du fichier CSS global */
+@import url('../global.css');
+
+/* Styles pour la vue d'ensemble du dashboard */
 .dashboard {
     -fx-background-color: #F0F6FF;
 }
 
-.dashboard_title {
+.dashboard-title {
     -fx-font-size: 1.6em;
+    -fx-text-fill: #4d5a68;
 }
 
-.dashboard Text {
-    -fx-fill: #4d5a68;
-}
-
-.card_container {
+/* Styles des cartes */
+.card-container {
     -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.07), 40, 0, 0, 10),
     dropshadow(gaussian, rgba(18,106,211,0.06), 9, 0, 0, 2);
     -fx-background-color: #FFF;
-    -fx-background-radius: 5;
-    -fx-padding: 10;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
 }
 
-/* Styles supplémentaires pour les cartes */
 .card {
     -fx-background-color: #FFFFFF;
-    -fx-background-radius: 10;
-    -fx-padding: 20;
-    -fx-spacing: 10;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
     -fx-pref-width: 215px;
 }
 
@@ -38,8 +39,7 @@
     -fx-font-size: 30px;
 }
 
-
-/* Style général pour les graphiques */
+/* Styles pour les graphiques */
 .chart {
     -fx-background-color: transparent;
 }
@@ -67,14 +67,14 @@
 .chart-axis {
     -fx-tick-label-fill: #666666;
     -fx-font-size: 12px;
-    -fx-stroke: transparent; /* Remove the axis lines */
+    -fx-stroke: transparent;
 }
 
 .chart-series-line {
     -fx-stroke-width: 2px;
     -fx-stroke: linear-gradient(to right, #6a5acd, #00bfff);
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 3);
-    -fx-fill: linear-gradient(to bottom, #6a5acd66, #00bfff66); /* Semi-transparent fill */
+    -fx-fill: linear-gradient(to bottom, #6a5acd66, #00bfff66);
 }
 
 .chart-symbol {
@@ -85,9 +85,9 @@
 }
 
 .axis-tick-mark {
-    -fx-stroke: #E6E6E6; /* Lighter grid lines */
+    -fx-stroke: #E6E6E6;
 }
 
 .axis-label {
-    -fx-text-fill: #666666; /* Text color for axis labels */
+    -fx-text-fill: #666666;
 }

@@ -10,7 +10,7 @@ module com.yb.digilib {
     opens com.yb.digilib to javafx.fxml;
     exports com.yb.digilib;
     exports com.yb.digilib.Controllers.Layout;
-    exports com.yb.digilib.Controllers.Admin;
     exports com.yb.digilib.Views;
     exports com.yb.digilib.Models;
+    exports com.yb.digilib.Controllers;
 }

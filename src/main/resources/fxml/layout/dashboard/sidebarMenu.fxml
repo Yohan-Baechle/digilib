@@ -8,17 +8,22 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefWidth="300" prefHeight="800" styleClass="main_menu_container" stylesheets="@../../../styles/dashboard/menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.MenuController">
-    <!-- Conteneur principal -->
-    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane prefWidth="300" prefHeight="800" styleClass="main_menu_container"
+            stylesheets="@../../../styles/dashboard/sidebarMenu.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.yb.digilib.Controllers.Layout.MenuController">
 
-        <!-- Conteneur pour le titre -->
+    <!-- Main container for the entire sidebar menu -->
+    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- Title container with logo and app name -->
         <HBox prefHeight="100.0" styleClass="title_container">
             <FontAwesomeIconView glyphName="BOOK" size="30" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DigiLib" />
         </HBox>
 
-        <!-- Conteneur pour la navigation -->
+        <!-- Navigation section for different views -->
         <VBox fx:id="navigationContent" styleClass="menu_container">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAVIGATION" />
             <Button fx:id="homeBtn" mnemonicParsing="false" text="Accueil">
@@ -53,10 +58,10 @@
             </Button>
         </VBox>
 
-        <!-- Séparateur -->
+        <!-- Separator between the navigation and account sections -->
         <Line styleClass="separator" VBox.vgrow="ALWAYS" />
 
-        <!-- Section Compte (placée en bas) -->
+        <!-- Account section at the bottom -->
         <VBox fx:id="accountSection" alignment="BOTTOM_LEFT" styleClass="menu_container">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="COMPTE" />
             <Button fx:id="settingsBtn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Paramètres">
@@ -72,11 +77,12 @@
         </VBox>
     </VBox>
 
-    <!-- Bouton d'aide en bas -->
-    <Button fx:id="helpSupportBtn" mnemonicParsing="false" styleClass="help_support_btn" text="Aide &amp; Support" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+    <!-- Help and support button located at the bottom of the sidebar -->
+    <Button fx:id="helpSupportBtn" mnemonicParsing="false" styleClass="help_support_btn"
+            text="Aide &amp; Support" AnchorPane.bottomAnchor="20.0"
+            AnchorPane.leftAnchor="20.0">
         <graphic>
             <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="20" />
         </graphic>
     </Button>
 </AnchorPane>
-
