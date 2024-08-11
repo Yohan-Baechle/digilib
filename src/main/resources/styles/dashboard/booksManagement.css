@@ -1,10 +1,5 @@
 @import url("../global.css");
 
-/* Arrière-plan général pour la page de gestion des livres */
-.books-management {
-    -fx-background-color: #F0F6FF;
-}
-
 /* Style pour la barre de recherche */
 .search-bar {
     -fx-background-color: #FFFFFF;
@@ -15,52 +10,56 @@
 }
 
 .icon {
-    -fx-fill: #126AD3;
-    -fx-font-size: 20px;
+    -fx-fill: #FFF;
 }
 
-/* Boutons d'action */
-.action-button {
-    -fx-background-color: #126AD3;
-    -fx-text-fill: white;
-    -fx-padding: 10 20;
-    -fx-font-size: 14px;
-    -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.1), 10, 0, 0, 5);
-}
-
-.action-button:hover {
-    -fx-background-color: #0F5CAD;
-}
-
-/* Style du tableau de données */
-.data-table {
+/* Style général du tableau */
+/* Style général du tableau */
+.table-view {
     -fx-alternate-row-fill-visible: true;
     -fx-control-inner-background: white;
-    -fx-control-inner-background-alt: #f9f9f9;
+    -fx-control-inner-background-alt: #F0F6FF;
     -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.07), 10, 0, 0, 5);
     -fx-selection-bar: #126AD3;
     -fx-selection-bar-non-focused: #d9e9ff;
 }
 
-.data-table .column-header-background {
-    -fx-background-color: #126AD3;
-    -fx-text-fill: white;
+/* Arrière-plan de l'en-tête des colonnes */
+/* Styliser l'arrière-plan de l'en-tête des colonnes */
+.table-view .column-header {
+    -fx-background-color: white;
 }
 
-.data-table .table-column {
-    -fx-text-fill: #333;
+/* Styliser le texte de l'en-tête des colonnes */
+.table-view .column-header .label {
+    -fx-text-fill: #4d5a68;
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-font-weight: bold; /* Texte en gras */
 }
 
-.data-table .table-cell {
-    -fx-padding: 10;
-    -fx-text-fill: #333;
+/* Bordure des cellules de l'en-tête */
+.table-view .column-header {
+    -fx-border-color: #FFFFFF; /* Bordure blanche entre les colonnes */
+    -fx-border-width: 0 1px 0 0; /* Bordure à droite seulement */
 }
 
+/* Effet au survol pour les en-têtes */
+.table-view .column-header:hover {
+    -fx-background-color: #145A9F; /* Couleur de fond au survol */
+}
+
+
+/* Effet au survol pour les en-têtes */
+.table-view .table-column-header:hover {
+    -fx-background-color: #145A9F; /* Couleur de fond au survol */
+}
+
+/* Titre de la page */
 .page-title {
     -fx-font-size: 1.6em;
     -fx-text-fill: #4d5a68;
     -fx-font-weight: bold;
     -fx-padding: 20 0;
 }
+
+

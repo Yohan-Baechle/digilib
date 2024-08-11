@@ -14,6 +14,11 @@
     -fx-background-color: #191D38;
 }
 
+/* Couleur du conteneur principal */
+.main-container {
+    -fx-background-color: #f0f6ff;
+}
+
 /* Couleurs des icônes */
 .icon-primary {
     -fx-fill: #736CC7;
@@ -30,11 +35,83 @@
 
 /* Boutons communs */
 .button-primary {
-    -fx-background-color: #126AD3;
+    -fx-background-color: #6861C3;
     -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-font-size: 14px;
     -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(54,48,128,0.3), 10, 0, 0, 5);
 }
 
 .button-primary:hover {
-    -fx-background-color: #0F5CAD;
+    -fx-background-color: #5B55AC; /* Teinte légèrement plus foncée de #6861C3 */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(48,43,115,0.5), 15, 0, 0, 7);
+}
+
+.button-success {
+    -fx-background-color: #28A745; /* Vert classique pour le succès */
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(40,167,69,0.1), 10, 0, 0, 5); /* Ombre de base */
+}
+
+.button-success:hover {
+    -fx-background-color: #218838; /* Teinte plus foncée au survol */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(33,136,56,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
+}
+
+/* Bouton d'avertissement */
+.button-warning {
+    -fx-background-color: #FFC107; /* Jaune pour l'avertissement */
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(255,193,7,0.1), 10, 0, 0, 5); /* Ombre de base */
+}
+
+.button-warning:hover {
+    -fx-background-color: #E0A800; /* Teinte plus foncée au survol */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(224,168,0,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
+}
+
+/* Bouton destructif */
+.button-destructive {
+    -fx-background-color: #FF4136;
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(255,65,54,0.1), 10, 0, 0, 5); /* Ombre de base */
+}
+
+.button-destructive:hover {
+    -fx-background-color: #E03B31;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(224,59,49,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
+}
+
+
+
+/* Couleurs des formulaires */
+.input-field {
+    -fx-background-color: #FFF;
+    -fx-pref-height: 35px;
+    -fx-font-size: 1.2em;
+    -fx-padding: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.2, 0, 1);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+.page-title {
+    -fx-font-size: 1.6em;
+    -fx-font-weight: 800;
+    -fx-fill: #4d5a68;
 }
