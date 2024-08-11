@@ -20,7 +20,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loginBtn.setOnAction(event -> Model.getInstance().getViewFactory().showAdminWindows());
+        loginBtn.setOnAction(event -> onLogin());
     }
 
     private void onLogin() {
