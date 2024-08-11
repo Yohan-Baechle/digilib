@@ -1,13 +1,5 @@
 @import url("../global.css");
 
-.dashboard {
-    -fx-background-color: #F0F6FF;
-}
-
-.dashboard-title {
-    -fx-font-size: 1.6em;
-    -fx-fill: #4d5a68;
-}
 
 .card-container {
     -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.07), 40, 0, 0, 10),
@@ -17,6 +9,58 @@
     -fx-padding: 10;
 }
 
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-pref-width: 215px;
+}
+
+.card Text {
+    -fx-fill: #4d5a68;
+}
+
+/* Icon container styles: round background */
+.icon-container {
+    -fx-background-radius: 50%; /* Make the container round */
+    -fx-padding: 15px;          /* Padding inside the container */
+    -fx-alignment: center;      /* Center the icon inside the container */
+}
+
+/* Specific colors for each icon */
+.icon-book-container {
+    -fx-background-color: #FF5733; /* Red background for the book icon */
+}
+
+.icon-users-container {
+    -fx-background-color: #33C3FF; /* Blue background for the users icon */
+}
+
+.icon-borrowed-container {
+    -fx-background-color: #28A745; /* Green background for the borrowed books icon */
+}
+
+.icon-clock-container {
+    -fx-background-color: #FFC107; /* Yellow background for the clock icon */
+}
+
+/* Style to change icon color */
+.icon-container FontAwesomeIconView {
+    -fx-fill: #FFFFFF; /* White color for the icons */
+}
+
+
+
+.card-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #126AD3;
+}
+
+
+
+/* Charts Styles */
 .card {
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 10;
@@ -36,7 +80,8 @@
     -fx-font-size: 30px;
 }
 
-/* Styles pour les graphiques */
+
+/* Charts Styles */
 .chart {
     -fx-background-color: transparent;
 }
@@ -47,4 +92,44 @@
     -fx-text-fill: #444444;
 }
 
-/* Styles supplémentaires pour les graphiques */
+.chart-plot-background {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.chart-grid-lines {
+    -fx-stroke: #E6E6E6;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #555555;
+    -fx-font-size: 12px;
+}
+
+.chart-axis {
+    -fx-tick-label-fill: #666666;
+    -fx-font-size: 12px;
+    -fx-stroke: transparent; /* Remove the axis lines */
+}
+
+.chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-stroke: linear-gradient(to right, #6a5acd, #00bfff);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 3);
+    -fx-fill: linear-gradient(to bottom, #6a5acd66, #00bfff66); /* Semi-transparent fill */
+}
+
+.chart-symbol {
+    -fx-background-color: #FFFFFF, #6a5acd;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.axis-tick-mark {
+    -fx-stroke: #E6E6E6; /* Lighter grid lines */
+}
+
+.axis-label {
+    -fx-text-fill: #666666; /* Text color for axis labels */
+}

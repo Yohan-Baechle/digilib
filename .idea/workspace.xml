@@ -6,17 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="adbb758b-f844-4675-bb96-dac2f11b06bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/BooksManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/BooksManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/OverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/booksManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/booksManagement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/dashboardOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/dashboardOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/sidebarMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/sidebarMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/login/loginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/login/loginForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/booksManagement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/booksManagement.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/dashboardOverview.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/dashboardOverview.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/sidebarMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/sidebarMenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/login/login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

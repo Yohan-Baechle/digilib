@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
  * Controller responsible for initializing and managing the dashboard view.
  * It handles the population of various charts with data to display on the dashboard.
  */
-public class DashboardController implements Initializable {
+public class OverviewController implements Initializable {
 
     @FXML
     private Text usernameLbl;

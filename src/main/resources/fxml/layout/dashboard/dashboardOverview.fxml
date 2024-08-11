@@ -13,8 +13,8 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="800" prefWidth="900" styleClass="dashboard" stylesheets="@../../../styles/dashboard/dashboardOverview.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.DashboardController">
-    <Text fx:id="usernameLbl" layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dashboard-title" text="Tableau de bord" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
+<AnchorPane prefHeight="800" prefWidth="900" styleClass="main-container" stylesheets="@../../../styles/dashboard/dashboardOverview.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.OverviewController">
+    <Text fx:id="usernameLbl" layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="page-title" text="Tableau de bord" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
 
     <!-- Container pour les 4 cartes principales dans un HBox -->
     <HBox prefHeight="160.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
@@ -63,7 +63,7 @@
             <!-- Graphique 2 : Inscriptions mensuelles (AreaChart) -->
             <VBox styleClass="card" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
                 <Text styleClass="card-title" text="Inscriptions mensuelles" />
-                <AreaChart fx:id="monthlyRegistrationsAreaChart" VBox.vgrow="ALWAYS">
+                <AreaChart fx:id="monthlyRegistrationsAreaChart" styleClass="chart-title" VBox.vgrow="ALWAYS">
                     <xAxis>
                         <CategoryAxis label="Mois" fx:id="xAxisRegistrations" />
                     </xAxis>
@@ -78,7 +78,7 @@
             <!-- Graphique 3 : Revenus mensuels (StackedBarChart) -->
             <VBox styleClass="card" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
                 <Text styleClass="card-title" text="Revenus mensuels" />
-                <StackedBarChart fx:id="monthlyRevenueStackedBarChart" VBox.vgrow="ALWAYS">
+                <StackedBarChart fx:id="monthlyRevenueStackedBarChart" styleClass="chart" VBox.vgrow="ALWAYS">
                     <xAxis>
                         <CategoryAxis label="Mois" fx:id="xAxisRevenue" />
                     </xAxis>
@@ -91,7 +91,7 @@
             <!-- Graphique 4 : Emprunts par catégorie (BarChart) -->
             <VBox styleClass="card" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
                 <Text styleClass="card-title" text="Emprunts par catégorie" />
-                <BarChart fx:id="categoryBorrowedChart" VBox.vgrow="ALWAYS">
+                <BarChart fx:id="categoryBorrowedChart" styleClass="chart" VBox.vgrow="ALWAYS">
                     <xAxis>
                         <CategoryAxis label="Catégorie" fx:id="xAxisCategoryBorrowed" />
                     </xAxis>

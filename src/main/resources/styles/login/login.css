@@ -33,17 +33,6 @@
     -fx-text-fill: #4A5878;
 }
 
-.input-field {
-    -fx-background-color: #FFF;
-    -fx-pref-height: 35px;
-    -fx-font-size: 1.2em;
-    -fx-padding: 5px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.2, 0, 1);
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-border-color: transparent;
-}
-
 .login-form-container Button {
     -fx-background-color: #1E90FF;
     -fx-text-fill: #FFF;
