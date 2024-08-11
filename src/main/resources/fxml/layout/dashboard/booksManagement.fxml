@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefWidth="900" prefHeight="800" stylesheets="@../../../styles/dashboard/booksManagement.css" styleClass="books-management" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.BooksManagementController">
+
+    <!-- Titre de la page -->
+    <Text text="Books Management" layoutX="20.0" layoutY="30.0" styleClass="page-title" />
+
+    <!-- Barre de recherche en haut -->
+    <HBox spacing="10.0" layoutX="20.0" layoutY="70.0" styleClass="search_bar" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="70.0">
+        <TextField fx:id="searchField" promptText="Search books..." prefWidth="600.0"/>
+        <Button fx:id="searchButton" styleClass="action_button">
+            <graphic>
+                <FontAwesomeIconView glyphName="SEARCH" size="20.0" styleClass="icon"/>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Tableau de données au centre -->
+    <TableView fx:id="booksTable" styleClass="data_table" prefHeight="600.0" prefWidth="860.0" layoutX="20.0" layoutY="130.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0" AnchorPane.bottomAnchor="100.0">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200.0"/>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="200.0"/>
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="200.0"/>
+            <TableColumn fx:id="yearColumn" text="Year" prefWidth="100.0"/>
+        </columns>
+    </TableView>
+
+    <!-- Boutons d'action en bas -->
+    <HBox spacing="20.0" layoutX="20.0" layoutY="740.0" AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="20.0">
+        <Button fx:id="addButton" text="Add" prefWidth="120.0" styleClass="action_button">
+            <graphic>
+                <FontAwesomeIconView glyphName="PLUS" size="20.0" styleClass="icon"/>
+            </graphic>
+        </Button>
+        <Button fx:id="editButton" text="Edit" prefWidth="120.0" styleClass="action_button">
+            <graphic>
+                <FontAwesomeIconView glyphName="EDIT" size="20.0" styleClass="icon"/>
+            </graphic>
+        </Button>
+        <Button fx:id="deleteButton" text="Delete" prefWidth="120.0" styleClass="action_button">
+            <graphic>
+                <FontAwesomeIconView glyphName="TRASH" size="20.0" styleClass="icon"/>
+            </graphic>
+        </Button>
+    </HBox>
+</AnchorPane>

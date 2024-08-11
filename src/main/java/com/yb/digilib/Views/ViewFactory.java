@@ -1,6 +1,8 @@
 package com.yb.digilib.Views;
 
 import com.yb.digilib.Controllers.Admin.AdminController;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -9,9 +11,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ViewFactory {
+    private final StringProperty selectedMenuItem;
     private AnchorPane dashboardView;
+    private AnchorPane booksManagementView;
 
-    public ViewFactory() {}
+    public ViewFactory() {
+        this.selectedMenuItem = new SimpleStringProperty("");
+    }
+
+    public StringProperty getAdminSelectedMenuItem() {
+        return selectedMenuItem;
+    }
 
     public AnchorPane getDashboardView() {
         if (dashboardView == null) {
@@ -24,17 +34,26 @@ public class ViewFactory {
         return dashboardView;
     }
 
+    public AnchorPane getBooksManagementView() {
+        if (booksManagementView == null) {
+            try {
+                booksManagementView = new FXMLLoader(getClass().getResource("/fxml/layout/dashboard/booksManagement.fxml")).load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return booksManagementView;
+    }
+
     public void showLoginWindows() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/layout/login/login.fxml"));
-        // Taille spécifique pour la fenêtre de connexion
         createStage(loader, false, 600, 400);
     }
 
-    public void showAdminWindows() {
+    public void showAdminWindow() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/admin/admin.fxml"));
         AdminController adminController = new AdminController();
         loader.setController(adminController);
-        // Taille spécifique pour la fenêtre d'administration (tableau de bord)
         createStage(loader, true, 1200, 800);
     }
 
@@ -51,17 +70,12 @@ public class ViewFactory {
         stage.setScene(scene);
         stage.setTitle("Digilib");
 
-        // Définir la fenêtre redimensionnable ou non
         stage.setResizable(resizable);
-
-        // Appliquer la méthode sizeToScene pour ajuster la taille de la fenêtre
         stage.sizeToScene();
 
-        // Optionnel : Forcer la taille si nécessaire
         stage.setWidth(width);
         stage.setHeight(height);
 
-        // Afficher la fenêtre
         stage.show();
     }
 
