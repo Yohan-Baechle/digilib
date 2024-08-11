@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 .main_menu_container {
     -fx-background-color: #161931;
     -fx-alignment: center;
     -fx-font-family: "Poppins", sans-serif;
+    -fx-transition: all 0.3s ease;
 }
 
-/* Title/Logo Section */
 .title_container {
     -fx-background-color: #191D38;
     -fx-padding: 10;
@@ -23,7 +23,6 @@
     -fx-font-size: 1.6em;
 }
 
-/* Navigation Section */
 .menu_container {
     -fx-padding: 20;
     -fx-spacing: 20;
@@ -34,18 +33,13 @@
     -fx-font-size: 1em;
 }
 
-
-.menu_container Text {
-    -fx-text-fill: #F0F;
-}
-
 .menu_container Button {
-    -fx-pref-width: 260;
     -fx-background-color: transparent;
     -fx-text-fill: #8A9BC8;
     -fx-font-size: 1.1em;
     -fx-alignment: center-left;
     -fx-graphic-text-gap: 10;
+    -fx-padding: 10;
 }
 
 .menu_container Button:hover {
@@ -63,6 +57,7 @@
 
 .separator {
     -fx-stroke: #2A2554;
+    -fx-vgrow: ALWAYS;
 }
 
 .alt_menu_btn {
@@ -78,7 +73,6 @@
     -fx-fill: #FFF;
 }
 
-/* Hover pour le bouton Paramètres */
 .alt_menu_btn:hover {
     -fx-background-color: #1F2B3A;
     -fx-cursor: hand;
@@ -97,13 +91,11 @@
     -fx-fill: #FFF;
 }
 
-/* Hover pour le bouton Logout */
 .logout_btn:hover {
     -fx-background-color: #E03B31;
     -fx-cursor: hand;
 }
 
-/* Report Bug/Suggestion */
 .help_support_btn {
     -fx-pref-width: 260;
     -fx-background-color: #1E90FF;
