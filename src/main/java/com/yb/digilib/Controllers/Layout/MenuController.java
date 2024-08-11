@@ -39,14 +39,13 @@ public class MenuController implements Initializable {
     private void addListeners() {
         homeBtn.setOnAction(event -> onDashboard());
         manageBooksBtn.setOnAction(event -> onBooksManagement());
-        // Add listeners for other buttons if necessary
     }
 
     /**
      * Sets the selected menu item to "overview", which triggers the display of the dashboard view.
      */
     private void onDashboard() {
-        AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("overview");
+        AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("dashboardOverview");
     }
 
     /**

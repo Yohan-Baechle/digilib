@@ -3,7 +3,8 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml">
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.yb.digilib.Controllers.MainController">
 
     <!-- Sidebar menu included on the left -->
     <left>
@@ -16,3 +17,4 @@
     </center>
 
 </BorderPane>
+

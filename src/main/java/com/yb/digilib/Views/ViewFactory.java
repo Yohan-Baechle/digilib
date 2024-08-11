@@ -101,14 +101,11 @@ public class ViewFactory {
 
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Digilib");
-
+        stage.setTitle("DIGILIB");
         stage.setResizable(resizable);
         stage.sizeToScene(); // Adjusts the stage size to fit its content
-
         stage.setWidth(width);
         stage.setHeight(height);
-
         stage.show();
     }
 

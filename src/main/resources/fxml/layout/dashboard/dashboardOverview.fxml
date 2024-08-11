@@ -13,8 +13,8 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefWidth="900" prefHeight="800" styleClass="dashboard" stylesheets="@../../../styles/dashboard/dashboardOverview.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.DashboardController">
-    <Text fx:id="usernameLbl" layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dashboard_title" text="Tableau de bord" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
+<AnchorPane prefHeight="800" prefWidth="900" styleClass="dashboard" stylesheets="@../../../styles/dashboard/dashboardOverview.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.DashboardController">
+    <Text fx:id="usernameLbl" layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dashboard-title" text="Tableau de bord" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
 
     <!-- Container pour les 4 cartes principales dans un HBox -->
     <HBox prefHeight="160.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
