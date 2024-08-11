@@ -5,7 +5,7 @@ module com.yb.digilib {
     requires java.sql;
     requires org.xerial.sqlitejdbc;
 
-
+    opens com.yb.digilib.Controllers.Layout to javafx.fxml;
     opens com.yb.digilib to javafx.fxml;
     exports com.yb.digilib;
     exports com.yb.digilib.Controllers.Layout;

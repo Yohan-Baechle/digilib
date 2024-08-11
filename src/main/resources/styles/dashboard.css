@@ -1,0 +1,93 @@
+.dashboard {
+    -fx-background-color: #F0F6FF;
+}
+
+.dashboard_title {
+    -fx-font-size: 1.6em;
+}
+
+.dashboard Text {
+    -fx-fill: #4d5a68;
+}
+
+.card_container {
+    -fx-effect: dropshadow(gaussian, rgba(18,106,211,0.07), 40, 0, 0, 10),
+    dropshadow(gaussian, rgba(18,106,211,0.06), 9, 0, 0, 2);
+    -fx-background-color: #FFF;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+}
+
+/* Styles supplémentaires pour les cartes */
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-spacing: 10; /* Ajoute un espacement entre les éléments dans les VBox */
+}
+
+
+.card-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #126AD3;
+}
+
+.font-awesome-icon {
+    -fx-fill: #126AD3;
+    -fx-font-size: 30px;
+}
+
+
+/* Style général pour les graphiques */
+.chart {
+    -fx-background-color: transparent;
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.chart-grid-lines {
+    -fx-stroke: #E6E6E6;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #555555;
+    -fx-font-size: 12px;
+}
+
+.chart-axis {
+    -fx-tick-label-fill: #666666;
+    -fx-font-size: 12px;
+    -fx-stroke: transparent; /* Remove the axis lines */
+}
+
+.chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-stroke: linear-gradient(to right, #6a5acd, #00bfff);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 3);
+    -fx-fill: linear-gradient(to bottom, #6a5acd66, #00bfff66); /* Semi-transparent fill */
+}
+
+.chart-symbol {
+    -fx-background-color: #FFFFFF, #6a5acd;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.axis-tick-mark {
+    -fx-stroke: #E6E6E6; /* Lighter grid lines */
+}
+
+.axis-label {
+    -fx-text-fill: #666666; /* Text color for axis labels */
+}
