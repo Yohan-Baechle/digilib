@@ -8,66 +8,76 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="300.0" styleClass="main_menu_container" stylesheets="@../../styles/menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.MenuController">
-    <HBox prefHeight="100.0" prefWidth="200.0" styleClass="title_container">
-        <FontAwesomeIconView glyphName="BOOK" size="30" text=""/>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DigiLib"/>
-        <Button fx:id="toggle_sidebar_btn" mnemonicParsing="false">
-            <graphic>
-                <FontAwesomeIconView fx:id="toggle_icon" glyphName="ARROW_LEFT" size="8"/>
-            </graphic>
-        </Button>
-    </HBox>
-    <AnchorPane prefHeight="730.0" prefWidth="160.0">
-        <VBox layoutX="25.0" layoutY="80.0" prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+<AnchorPane styleClass="main_menu_container" stylesheets="@../../styles/menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.MenuController"
+            prefWidth="300" prefHeight="800" minWidth="300" minHeight="800">
+    <!-- Conteneur principal -->
+    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- Conteneur pour le titre -->
+        <HBox prefHeight="100.0" styleClass="title_container">
+            <FontAwesomeIconView glyphName="BOOK" size="30" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DigiLib" />
+        </HBox>
+
+        <!-- Conteneur pour la navigation -->
+        <VBox fx:id="navigationContent" styleClass="menu_container">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAVIGATION" />
-            <Button fx:id="dashboard_btn" mnemonicParsing="false" text="Accueil">
+            <Button fx:id="homeBtn" mnemonicParsing="false" text="Accueil">
                 <graphic>
                     <FontAwesomeIconView glyphName="HOME" size="20" />
                 </graphic>
             </Button>
-            <Button fx:id="accounts_btn1" layoutX="30.0" layoutY="80.0" mnemonicParsing="false" text="Gestion des livres">
+            <Button fx:id="manageBooksBtn" mnemonicParsing="false" text="Gestion des livres">
                 <graphic>
                     <FontAwesomeIconView glyphName="BOOK" size="20" />
                 </graphic>
             </Button>
-            <Button fx:id="accounts_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Gestion des membres">
+            <Button fx:id="manageMembersBtn" mnemonicParsing="false" text="Gestion des membres">
                 <graphic>
                     <FontAwesomeIconView glyphName="USERS" size="20" />
                 </graphic>
             </Button>
-            <Button fx:id="accounts_btn11" layoutX="30.0" layoutY="140.0" mnemonicParsing="false" text="Emprunts &amp; Retours">
+            <Button fx:id="loansReturnsBtn" mnemonicParsing="false" text="Emprunts &amp; Retours">
                 <graphic>
                     <FontAwesomeIconView glyphName="EXCHANGE" size="20" />
                 </graphic>
             </Button>
-            <Button fx:id="accounts_btn111" layoutX="30.0" layoutY="200.0" mnemonicParsing="false" text="Historique des Transactions">
+            <Button fx:id="transactionHistoryBtn" mnemonicParsing="false" text="Historique des Transactions">
                 <graphic>
                     <FontAwesomeIconView glyphName="HISTORY" size="20" />
                 </graphic>
             </Button>
-            <Button fx:id="accounts_btn1111" layoutX="30.0" layoutY="236.0" mnemonicParsing="false" text="Réservations">
+            <Button fx:id="reservationsBtn" mnemonicParsing="false" text="Réservations">
                 <graphic>
                     <FontAwesomeIconView glyphName="CALENDAR" size="20" />
                 </graphic>
             </Button>
-            <Line endX="260.0" styleClass="separator" />
-            <Text fx:id="compte_text" layoutX="30.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPTE" />
-            <Button fx:id="profile_btn" layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="alt_menu_btn" text="Paramètres">
+        </VBox>
+
+        <!-- Séparateur -->
+        <Line styleClass="separator" VBox.vgrow="ALWAYS" />
+
+        <!-- Section Compte (placée en bas) -->
+        <VBox fx:id="accountSection" alignment="BOTTOM_LEFT" styleClass="menu_container">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="COMPTE" />
+            <Button fx:id="settingsBtn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Paramètres">
                 <graphic>
                     <FontAwesomeIconView glyphName="COG" size="20" />
                 </graphic>
             </Button>
-            <Button fx:id="logout_btn" layoutX="10.0" layoutY="89.0" mnemonicParsing="false" styleClass="logout_btn" text="Se déconnecter">
+            <Button fx:id="logoutBtn" mnemonicParsing="false" styleClass="logout_btn" text="Se déconnecter">
                 <graphic>
                     <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="20" />
                 </graphic>
             </Button>
         </VBox>
-        <Button layoutX="65.0" layoutY="650.0" mnemonicParsing="false" styleClass="help_support_btn" text="Aide &amp; Support" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
-            <graphic>
-                <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="20" text="" />
-            </graphic>
-        </Button>
-    </AnchorPane>
-</VBox>
+    </VBox>
+
+    <!-- Bouton d'aide en bas -->
+    <Button fx:id="helpSupportBtn" mnemonicParsing="false" styleClass="help_support_btn" text="Aide &amp; Support" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+        <graphic>
+            <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="20" />
+        </graphic>
+    </Button>
+</AnchorPane>
+
