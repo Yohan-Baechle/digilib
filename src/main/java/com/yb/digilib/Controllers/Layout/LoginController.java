@@ -26,6 +26,6 @@ public class LoginController implements Initializable {
     private void onLogin() {
         Stage stage = (Stage) errorLbl.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        Model.getInstance().getViewFactory().showAdminWindows();
+        Model.getInstance().getViewFactory().showAdminWindow();
     }
 }

@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adbb758b-f844-4675-bb96-dac2f11b06bb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/BooksManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/booksManagement.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/booksManagement.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Admin/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/admin/admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/overview.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/login/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboard/menu.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -72,11 +72,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard" />
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml/layout/login" />
       <recent name="$PROJECT_DIR$/src/main/resources/styles/dashboard" />
       <recent name="$PROJECT_DIR$/src/main/resources/styles/login" />
       <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
-      <recent name="$PROJECT_DIR$/src/main/resources/fxml/layout" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunManager">
