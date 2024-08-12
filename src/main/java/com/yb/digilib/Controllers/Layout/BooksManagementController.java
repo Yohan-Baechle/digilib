@@ -45,22 +45,20 @@ public class BooksManagementController {
         quantityColumn.setReorderable(false);
 
         // Initialiser les colonnes du tableau
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
         yearColumn.setCellValueFactory(new PropertyValueFactory<>("year"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
-
-        booksTable.setColumnResizePolicy((param) -> {
-            // Stratégie simple: répartir l'espace disponible entre toutes les colonnes
-            double tableWidth = booksTable.getWidth();
-            for (TableColumn<Book, ?> column : booksTable.getColumns()) {
-                column.setPrefWidth(tableWidth / booksTable.getColumns().size());
-            }
-            return true;
-        });
-
+        // Utiliser des bindings pour définir les largeurs en pourcentages
+        idColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.1));      // 10% de la largeur totale
+        titleColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.25));   // 25% de la largeur totale
+        authorColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.2));   // 20% de la largeur totale
+        genreColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.2));    // 20% de la largeur totale
+        yearColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.1));     // 10% de la largeur totale
+        quantityColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.15));// 15% de la largeur totale
 
         // Rendre les colonnes éditables
         booksTable.setEditable(true);
@@ -89,6 +87,9 @@ public class BooksManagementController {
         yearColumn.setOnEditCommit(event -> event.getRowValue().setYear(event.getNewValue()));
         quantityColumn.setOnEditCommit(event -> event.getRowValue().setQuantity(event.getNewValue()));
     }
+
+
+
 
     // Classe interne représentant un livre
     public static class Book {

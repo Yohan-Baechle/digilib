@@ -28,6 +28,7 @@ public class MainController implements Initializable {
             switch (newValue) {
                 case "dashboardOverview" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getOverviewView());
                 case "booksManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getBooksManagementView());
+                case "membersManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getMembersManagementView());
                 default -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getOverviewView());
             }
         });

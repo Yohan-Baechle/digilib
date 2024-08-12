@@ -39,6 +39,7 @@ public class MenuController implements Initializable {
     private void addListeners() {
         homeBtn.setOnAction(event -> onDashboard());
         manageBooksBtn.setOnAction(event -> onBooksManagement());
+        manageMembersBtn.setOnAction(event -> onMembersManagement());
     }
 
     /**
@@ -53,6 +54,13 @@ public class MenuController implements Initializable {
      */
     private void onBooksManagement() {
         AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("booksManagement");
+    }
+
+    /**
+     * Sets the selected menu item to "membersManagement", which triggers the display of the members management view.
+     */
+    private void onMembersManagement() {
+        AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("membersManagement");
     }
 }
 

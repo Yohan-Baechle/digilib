@@ -16,6 +16,7 @@ public class ViewFactory {
     private final StringProperty selectedMenuItem;
     private AnchorPane overviewView;
     private AnchorPane booksManagementView;
+    private AnchorPane membersManagementView;
 
     /**
      * Initializes the ViewFactory with a selected menu item property.
@@ -44,7 +45,7 @@ public class ViewFactory {
             try {
                 overviewView = new FXMLLoader(getClass().getResource("/fxml/layout/dashboard/dashboardOverview.fxml")).load();
             } catch (IOException e) {
-                e.printStackTrace(); // Consider logging this exception properly
+                e.printStackTrace();
             }
         }
         return overviewView;
@@ -61,10 +62,27 @@ public class ViewFactory {
             try {
                 booksManagementView = new FXMLLoader(getClass().getResource("/fxml/layout/dashboard/booksManagement.fxml")).load();
             } catch (IOException e) {
-                e.printStackTrace(); // Consider logging this exception properly
+                e.printStackTrace();
             }
         }
         return booksManagementView;
+    }
+
+    /**
+     * Lazily loads and returns the books management view.
+     * If the view has already been loaded, returns the cached view.
+     *
+     * @return the books management view.
+     */
+    public AnchorPane getMembersManagementView() {
+        if (membersManagementView == null) {
+            try {
+                membersManagementView = new FXMLLoader(getClass().getResource("/fxml/layout/dashboard/membersManagement.fxml")).load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return membersManagementView;
     }
 
     /**
