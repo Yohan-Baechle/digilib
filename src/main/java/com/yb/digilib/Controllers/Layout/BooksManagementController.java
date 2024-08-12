@@ -53,12 +53,12 @@ public class BooksManagementController {
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
         // Utiliser des bindings pour définir les largeurs en pourcentages
-        idColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.1));      // 10% de la largeur totale
+        idColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.05));      // 10% de la largeur totale
         titleColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.25));   // 25% de la largeur totale
         authorColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.2));   // 20% de la largeur totale
         genreColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.2));    // 20% de la largeur totale
         yearColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.1));     // 10% de la largeur totale
-        quantityColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.15));// 15% de la largeur totale
+        quantityColumn.prefWidthProperty().bind(booksTable.widthProperty().multiply(0.2));// 15% de la largeur totale
 
         // Rendre les colonnes éditables
         booksTable.setEditable(true);

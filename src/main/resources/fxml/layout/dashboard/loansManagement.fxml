@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="900.0" styleClass="main-container" stylesheets="@../../../styles/global.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.LoansManagementController">
+
+    <!-- Titre de la page -->
+    <Text fx:id="pageTitle" layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="page-title" text="Gestion des Emprunts et Retours" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
+
+    <!-- Conteneur pour la recherche -->
+    <HBox spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
+        <TextField fx:id="searchField" prefWidth="860.0" promptText="Rechercher par titre, membre, etc." styleClass="search-bar" />
+        <Button onAction="#handleSearch" styleClass="search-button">
+         <graphic>
+            <FontAwesomeIconView glyphName="SEARCH" size="20" styleClass="icon" />
+         </graphic></Button>
+    </HBox>
+
+    <!-- Tableau des emprunts -->
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+        <TableView fx:id="loansTable" VBox.vgrow="ALWAYS">
+            <!-- Colonnes pour les informations sur les livres -->
+            <TableColumn fx:id="bookIdColumn" prefWidth="75.0" text="ID Livre" />
+            <TableColumn fx:id="bookTitleColumn" prefWidth="200.0" text="Titre" />
+            <TableColumn fx:id="bookAuthorColumn" prefWidth="150.0" text="Auteur" />
+            <TableColumn fx:id="bookGenreColumn" prefWidth="100.0" text="Genre" />
+
+            <!-- Colonnes pour les informations sur les membres -->
+            <TableColumn fx:id="memberIdColumn" prefWidth="75.0" text="ID Membre" />
+            <TableColumn fx:id="memberNameColumn" prefWidth="150.0" text="Nom Membre" />
+            <TableColumn fx:id="memberEmailColumn" prefWidth="200.0" text="Email Membre" />
+            <TableColumn fx:id="memberPhoneColumn" prefWidth="120.0" text="Téléphone" />
+
+            <!-- Colonnes pour les informations de la transaction -->
+            <TableColumn fx:id="loanDateColumn" prefWidth="120.0" text="Date d'emprunt" />
+            <TableColumn fx:id="dueDateColumn" prefWidth="120.0" text="Date Retour Prévue" />
+            <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Statut" />
+            <TableColumn fx:id="lateDaysColumn" prefWidth="100.0" text="Jours de Retard" />
+            <TableColumn fx:id="lateFeesColumn" prefWidth="100.0" text="Frais de Retard (€)" />
+
+            <!-- Colonne pour les actions -->
+            <TableColumn fx:id="actionsColumn" prefWidth="150.0" text="Actions" />
+        </TableView>
+    </VBox>
+
+    <!-- Détails supplémentaires et actions -->
+    <VBox prefHeight="100.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <HBox spacing="10.0">
+            <Label text="ID Membre :" />
+            <TextField fx:id="memberIdField" editable="false" promptText="ID Membre" />
+            <Label text="Nom Membre :" />
+            <TextField fx:id="memberNameField" editable="false" promptText="Nom Membre" />
+        </HBox>
+        <HBox spacing="10.0">
+            <Label text="ID Livre :" />
+            <TextField fx:id="bookIdField" editable="false" promptText="ID Livre" />
+            <Label text="Titre Livre :" />
+            <TextField fx:id="bookTitleField" editable="false" promptText="Titre Livre" />
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+            <Button onAction="#handleReturn" styleClass="button-success" text="Retourner Livre" />
+            <Button onAction="#handleRenew" styleClass="button-primary" text="Renouveler Emprunt" />
+            <Button onAction="#handleSendReminder" styleClass="button-warning" text="Envoyer Rappel" />
+        </HBox>
+    </VBox>
+
+</AnchorPane>
