@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adbb758b-f844-4675-bb96-dac2f11b06bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/LoansManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/loansManagement.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/transactionsHistory.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/TransactionHistoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/BooksManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/BooksManagementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/transactionsHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/transactionsHistory.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -129,7 +127,7 @@
       <workItem from="1723382542162" duration="6000" />
       <workItem from="1723453907774" duration="10000" />
       <workItem from="1723453976198" duration="11123000" />
-      <workItem from="1723470887318" duration="627000" />
+      <workItem from="1723470887318" duration="1588000" />
     </task>
     <servers />
   </component>
