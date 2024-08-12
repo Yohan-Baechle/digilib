@@ -18,6 +18,7 @@ public class ViewFactory {
     private AnchorPane booksManagementView;
     private AnchorPane membersManagementView;
     private AnchorPane loansManagementView;
+    private AnchorPane transactionsHistoryView;
 
     /**
      * Initializes the ViewFactory with a selected menu item property.
@@ -101,6 +102,23 @@ public class ViewFactory {
             }
         }
         return loansManagementView;
+    }
+
+    /**
+     * Lazily loads and returns transactions history view.
+     * If the view has already been loaded, returns the cached view.
+     *
+     * @return the transactions history view.
+     */
+    public AnchorPane getTransactionsHistoryView() {
+        if (transactionsHistoryView == null) {
+            try {
+                transactionsHistoryView = new FXMLLoader(getClass().getResource("/fxml/layout/dashboard/transactionsHistory.fxml")).load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return transactionsHistoryView;
     }
 
     /**

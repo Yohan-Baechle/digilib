@@ -41,6 +41,7 @@ public class MenuController implements Initializable {
         manageBooksBtn.setOnAction(event -> onBooksManagement());
         manageMembersBtn.setOnAction(event -> onMembersManagement());
         loansReturnsBtn.setOnAction(event -> onLoansManagement());
+        transactionHistoryBtn.setOnAction(event -> onTransactionHistory());
     }
 
     /**
@@ -65,10 +66,17 @@ public class MenuController implements Initializable {
     }
 
     /**
-     * Sets the selected menu item to "membersManagement", which triggers the display of the members management view.
+     * Sets the selected menu item to "loansManagement", which triggers the display of the loans management view.
      */
     private void onLoansManagement() {
         AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("loansManagement");
+    }
+
+    /**
+     * Sets the selected menu item to "transactionsHistory", which triggers the display of the transactions history view.
+     */
+    private void onTransactionHistory() {
+        AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("transactionsHistory");
     }
 }
 

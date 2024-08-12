@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.TransactionHistoryController">
-    <!-- Titre de la page -->
-    <Label text="Historique des Transactions" styleClass="page-title" />
+<AnchorPane stylesheets="@../../../styles/global.css" styleClass="main-container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.Controllers.Layout.TransactionHistoryController" prefWidth="900" prefHeight="800">
+    <VBox AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <!-- Titre de la page -->
+        <Label text="Historique des Transactions" styleClass="page-title" />
 
-    <!-- Barre de recherche -->
-    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="search-bar">
-        <Label text="Rechercher :" />
-        <TextField fx:id="searchField" promptText="Entrez le nom du client ou l'ID de la transaction..." />
-        <Button text="Rechercher" fx:id="searchButton" styleClass="button-primary" />
-    </HBox>
+        <!-- Barre de recherche -->
+        <HBox fx:id="searchBar" alignment="CENTER_LEFT" spacing="10">
+            <Label text="Rechercher :" />
+            <TextField fx:id="searchField" promptText="Entrez le nom du client ou l'ID de la transaction..." />
+            <Button text="Rechercher" fx:id="searchButton" styleClass="button-primary" />
+        </HBox>
 
-    <!-- Tableau des transactions -->
-    <TableView fx:id="transactionTable" VBox.vgrow="ALWAYS">
-        <columns>
-            <TableColumn fx:id="transactionIdColumn" text="ID Transaction" prefWidth="150"/>
-            <TableColumn fx:id="dateColumn" text="Date" prefWidth="150"/>
-            <TableColumn fx:id="clientNameColumn" text="Nom du Client" prefWidth="200"/>
-            <TableColumn fx:id="amountColumn" text="Montant" prefWidth="100"/>
-            <TableColumn fx:id="statusColumn" text="Statut" prefWidth="150"/>
-        </columns>
-    </TableView>
+        <!-- Tableau des transactions -->
+        <TableView fx:id="transactionTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="transactionIdColumn" text="ID Transaction" prefWidth="150"/>
+                <TableColumn fx:id="dateColumn" text="Date" prefWidth="150"/>
+                <TableColumn fx:id="clientNameColumn" text="Nom du Client" prefWidth="200"/>
+                <TableColumn fx:id="amountColumn" text="Montant" prefWidth="100"/>
+                <TableColumn fx:id="statusColumn" text="Statut" prefWidth="150"/>
+            </columns>
+        </TableView>
 
-    <!-- Boutons d'action -->
-    <HBox spacing="10" alignment="CENTER_RIGHT">
-        <Button text="Exporter" fx:id="exportButton" styleClass="button-success"/>
-        <Button text="Supprimer" fx:id="deleteButton" styleClass="button-destructive"/>
-    </HBox>
-</VBox>
+        <!-- Graphique à barres : Montants par mois -->
+        <BarChart fx:id="transactionAmountBarChart" title="Montants des Transactions par Mois" VBox.vgrow="ALWAYS">
+            <xAxis>
+                <CategoryAxis label="Mois" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Montant (en €)" />
+            </yAxis>
+        </BarChart>
+
+        <!-- Graphique circulaire : Répartition par statut -->
+        <PieChart fx:id="transactionStatusPieChart" title="Répartition des Transactions par Statut" VBox.vgrow="ALWAYS" />
+
+        <!-- Boutons d'action -->
+        <HBox fx:id="actionButtons" alignment="CENTER_RIGHT" spacing="10">
+            <Button text="Exporter" fx:id="exportButton" styleClass="button-success"/>
+            <Button text="Supprimer" fx:id="deleteButton" styleClass="button-destructive"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
