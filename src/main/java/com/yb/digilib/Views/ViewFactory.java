@@ -17,6 +17,7 @@ public class ViewFactory {
     private AnchorPane overviewView;
     private AnchorPane booksManagementView;
     private AnchorPane membersManagementView;
+    private AnchorPane loansManagementView;
 
     /**
      * Initializes the ViewFactory with a selected menu item property.
@@ -69,10 +70,10 @@ public class ViewFactory {
     }
 
     /**
-     * Lazily loads and returns the books management view.
+     * Lazily loads and returns the members management view.
      * If the view has already been loaded, returns the cached view.
      *
-     * @return the books management view.
+     * @return the members management view.
      */
     public AnchorPane getMembersManagementView() {
         if (membersManagementView == null) {
@@ -83,6 +84,23 @@ public class ViewFactory {
             }
         }
         return membersManagementView;
+    }
+
+    /**
+     * Lazily loads and returns the loans management view.
+     * If the view has already been loaded, returns the cached view.
+     *
+     * @return the loans management view.
+     */
+    public AnchorPane getLoansManagementView() {
+        if (loansManagementView == null) {
+            try {
+                loansManagementView = new FXMLLoader(getClass().getResource("/fxml/layout/dashboard/loansManagement.fxml")).load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return loansManagementView;
     }
 
     /**

@@ -29,6 +29,7 @@ public class MainController implements Initializable {
                 case "dashboardOverview" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getOverviewView());
                 case "booksManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getBooksManagementView());
                 case "membersManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getMembersManagementView());
+                case "loansManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getLoansManagementView());
                 default -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getOverviewView());
             }
         });
