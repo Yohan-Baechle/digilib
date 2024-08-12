@@ -2,7 +2,13 @@
 
 /* Appliquer la police Poppins à tout l'application */
 * {
-    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-family: 'Poppins', 'Arial', sans-serif;;
+}
+
+.page-title {
+    -fx-font-size: 1.6em;
+    -fx-font-weight: 800;
+    -fx-fill: #4d5a68;
 }
 
 /* Couleurs générales */
@@ -44,13 +50,13 @@
 }
 
 .button-primary:hover {
-    -fx-background-color: #5B55AC; /* Teinte légèrement plus foncée de #6861C3 */
+    -fx-background-color: #5B55AC;
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(48,43,115,0.5), 15, 0, 0, 7);
 }
 
 .button-success {
-    -fx-background-color: #28A745; /* Vert classique pour le succès */
+    -fx-background-color: #28A745;
     -fx-text-fill: white;
     -fx-padding: 8 20;
     -fx-font-size: 14px;
@@ -59,14 +65,14 @@
 }
 
 .button-success:hover {
-    -fx-background-color: #218838; /* Teinte plus foncée au survol */
+    -fx-background-color: #218838;
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(33,136,56,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
 }
 
 /* Bouton d'avertissement */
 .button-warning {
-    -fx-background-color: #FFC107; /* Jaune pour l'avertissement */
+    -fx-background-color: #FFC107;
     -fx-text-fill: white;
     -fx-padding: 8 20;
     -fx-font-size: 14px;
@@ -75,7 +81,7 @@
 }
 
 .button-warning:hover {
-    -fx-background-color: #E0A800; /* Teinte plus foncée au survol */
+    -fx-background-color: #E0A800;
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(224,168,0,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
 }
@@ -97,7 +103,6 @@
 }
 
 
-
 /* Couleurs des formulaires */
 .input-field {
     -fx-background-color: #FFF;
@@ -110,8 +115,89 @@
     -fx-border-color: transparent;
 }
 
-.page-title {
-    -fx-font-size: 1.6em;
-    -fx-font-weight: 800;
-    -fx-fill: #4d5a68;
+
+/* Style général du tableau */
+.table-view {
+    -fx-alternate-row-fill-visible: true;
+    -fx-control-inner-background: white;
+    -fx-control-inner-background-alt: #F0F6FF;
+    -fx-background-radius: 5; /* Arrondir le fond */
+    -fx-border-radius: 5; /* Arrondir la bordure */
+    -fx-selection-bar: #E3DDF5;
+    -fx-selection-bar-non-focused: #d9e9ff;
+    -fx-border-color: #ececec; /* Couleur de la bordure */
+    -fx-border-width: 1px; /* Largeur de la bordure */
+    -fx-background-insets: 0, 1; /* Ajuster l'alignement du fond */
+    -fx-padding: 5px; /* Ajouter un peu d'espace intérieur */
 }
+
+/* Styliser l'arrière-plan de l'en-tête des colonnes */
+.table-view .column-header {
+    -fx-background-color: white;
+    -fx-border-color: #FFF; /* Bordure blanche entre les colonnes */
+    -fx-border-width: 0 1px 0 0; /* Bordure à droite seulement */
+    -fx-background-radius: 5 5 0 0; /* Arrondir les coins supérieurs */
+    -fx-border-radius: 5 5 0 0; /* Appliquer le radius à la bordure */
+}
+
+/* Styliser le texte de l'en-tête des colonnes */
+.table-view .column-header .label {
+    -fx-text-fill: #4d5a68;
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-font-weight: bold;
+}
+
+/* Effet au survol pour les en-têtes */
+.table-view .column-header:hover,
+.table-view .table-column-header:hover {
+    -fx-background-radius: 5 5 0 0; /* Garder les coins arrondis */
+}
+
+/* Appliquer le radius aux cellules */
+.table-view .table-row-cell {
+    -fx-background-radius: 5; /* Appliquer le radius aux lignes */
+    -fx-border-radius: 5; /* Appliquer le radius à la bordure des lignes */
+}
+
+/* Appliquer le radius au coin inférieur */
+.table-view .corner {
+    -fx-background-radius: 0 0 5 5; /* Arrondir les coins inférieurs */
+    -fx-border-radius: 0 0 5 5; /* Appliquer le radius à la bordure */
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b944);
+}
+
+/* Style pour la barre de recherche */
+.search-bar {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.search-button {
+    -fx-background-color: #736CC7;
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+}
+
+.icon {
+    -fx-fill: #FFF;
+}
+
