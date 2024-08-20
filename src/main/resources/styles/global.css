@@ -1,170 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@font-face {
+    font-family: 'Poppins Light';
+    src: url('../fonts/Poppins-Light.ttf');
+}
 
-/* Appliquer la police Poppins à tout l'application */
-* {
-    -fx-font-family: 'Poppins', 'Arial', sans-serif;;
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url('../fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins ExtraBold';
+    src: url('../fonts/Poppins-ExtraBold.ttf');
+}
+
+
+Label, TextField, TextArea, Text {
+    -fx-font-family: 'Poppins Regular';
+    -fx-text-fill: #333;
+}
+
+Button {
+    -fx-font-family: 'Poppins Bold';
 }
 
 .page-title {
+    -fx-font-family: "Poppins Bold";
     -fx-font-size: 1.6em;
-    -fx-font-weight: 800;
-    -fx-fill: #4d5a68;
+    -fx-fill: #333;
 }
 
-/* Couleurs générales */
-.background-primary {
-    -fx-background-color: #161931;
-}
-
-.background-secondary {
-    -fx-background-color: #191D38;
-}
-
-/* Couleur du conteneur principal */
 .main-container {
-    -fx-background-color: #f0f6ff;
+    -fx-background-color: #F2F3F2;
 }
 
-/* Couleurs des icônes */
-.icon-primary {
-    -fx-fill: #736CC7;
-}
-
-/* Couleur du texte */
-.text-primary {
-    -fx-text-fill: #FFFFFF;
-}
-
-.text-secondary {
-    -fx-text-fill: #4A5878;
-}
-
-/* Boutons communs */
 .button-primary {
-    -fx-background-color: #6861C3;
+    -fx-background-color: #3E1999;
     -fx-text-fill: white;
-    -fx-padding: 8 20;
+    -fx-padding: 10 20 ;
     -fx-font-size: 14px;
     -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(54,48,128,0.3), 10, 0, 0, 5);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 15, 0, 0, 2);
+}
+
+.button-primary FontIcon {
+    -fx-fill: white;
 }
 
 .button-primary:hover {
-    -fx-background-color: #5B55AC;
+    -fx-background-color: #3B1A91;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(48,43,115,0.5), 15, 0, 0, 7);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0, 0, 4);
+}
+
+.button-primary:pressed {
+    -fx-background-color: #2E1274;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, -2);
 }
 
 .button-success {
-    -fx-background-color: #28A745;
+    -fx-background-color: #4CAF50;
     -fx-text-fill: white;
-    -fx-padding: 8 20;
-    -fx-font-size: 14px;
+    -fx-padding: 12 8;
+    -fx-font-size: 16px;
     -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(40,167,69,0.1), 10, 0, 0, 5); /* Ombre de base */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0, 0, 0.5);
+}
+
+.button-success FontIcon {
+    -fx-fill: white;
 }
 
 .button-success:hover {
-    -fx-background-color: #218838;
+    -fx-background-color: #45A049;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(33,136,56,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
 }
 
-/* Bouton d'avertissement */
+.button-success:pressed {
+    -fx-background-color: #388E3C;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, -1);
+}
+
 .button-warning {
-    -fx-background-color: #FFC107;
+    -fx-background-color: #FF9800;
     -fx-text-fill: white;
-    -fx-padding: 8 20;
-    -fx-font-size: 14px;
+    -fx-padding: 4 8;
+    -fx-font-size: 16px;
     -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(255,193,7,0.1), 10, 0, 0, 5); /* Ombre de base */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0, 0, 0.5);
+}
+
+.button-warning FontIcon {
+    -fx-fill: white;
 }
 
 .button-warning:hover {
-    -fx-background-color: #E0A800;
+    -fx-background-color: #FB8C00;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(224,168,0,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
 }
 
-/* Bouton destructif */
+.button-warning:pressed {
+    -fx-background-color: #F57C00;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, -0.5);
+}
+
 .button-destructive {
-    -fx-background-color: #FF4136;
+    -fx-background-color: #F44336;
     -fx-text-fill: white;
-    -fx-padding: 8 20;
-    -fx-font-size: 14px;
+    -fx-padding: 4 8;
+    -fx-font-size: 16px;
     -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(255,65,54,0.1), 10, 0, 0, 5); /* Ombre de base */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0, 0, 0.5);
+}
+
+.button-destructive FontIcon {
+    -fx-fill: white;
 }
 
 .button-destructive:hover {
-    -fx-background-color: #E03B31;
+    -fx-background-color: #E53935;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(224,59,49,0.4), 15, 0, 0, 7); /* Ombre plus prononcée au survol */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+
+.button-destructive:pressed {
+    -fx-background-color: #D32F2F;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, -0.5);
 }
 
 
-/* Couleurs des formulaires */
 .input-field {
     -fx-background-color: #FFF;
     -fx-pref-height: 35px;
     -fx-font-size: 1.2em;
-    -fx-padding: 5px;
+    -fx-padding: 5;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.2, 0, 1);
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
     -fx-border-color: transparent;
+}
+
+.search-bar {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-spacing: 10;
 }
 
 
 /* Style général du tableau */
-.table-view {
-    -fx-alternate-row-fill-visible: true;
-    -fx-control-inner-background: white;
-    -fx-control-inner-background-alt: #F0F6FF;
-    -fx-background-radius: 5; /* Arrondir le fond */
-    -fx-border-radius: 5; /* Arrondir la bordure */
-    -fx-selection-bar: #E3DDF5;
-    -fx-selection-bar-non-focused: #d9e9ff;
-    -fx-border-color: #ececec; /* Couleur de la bordure */
-    -fx-border-width: 1px; /* Largeur de la bordure */
-    -fx-background-insets: 0, 1; /* Ajuster l'alignement du fond */
-    -fx-padding: 5px; /* Ajouter un peu d'espace intérieur */
-}
-
-/* Styliser l'arrière-plan de l'en-tête des colonnes */
-.table-view .column-header {
-    -fx-background-color: white;
-    -fx-border-color: #FFF; /* Bordure blanche entre les colonnes */
-    -fx-border-width: 0 1px 0 0; /* Bordure à droite seulement */
-    -fx-background-radius: 5 5 0 0; /* Arrondir les coins supérieurs */
-    -fx-border-radius: 5 5 0 0; /* Appliquer le radius à la bordure */
-}
-
-/* Styliser le texte de l'en-tête des colonnes */
-.table-view .column-header .label {
-    -fx-text-fill: #4d5a68;
-    -fx-font-size: 14px; /* Taille de la police */
-    -fx-font-weight: bold;
-}
-
-/* Effet au survol pour les en-têtes */
-.table-view .column-header:hover,
-.table-view .table-column-header:hover {
-    -fx-background-radius: 5 5 0 0; /* Garder les coins arrondis */
-}
-
-/* Appliquer le radius aux cellules */
-.table-view .table-row-cell {
-    -fx-background-radius: 5; /* Appliquer le radius aux lignes */
-    -fx-border-radius: 5; /* Appliquer le radius à la bordure des lignes */
-}
-
-/* Appliquer le radius au coin inférieur */
-.table-view .corner {
-    -fx-background-radius: 0 0 5 5; /* Arrondir les coins inférieurs */
-    -fx-border-radius: 0 0 5 5; /* Appliquer le radius à la bordure */
-}
-
 .table-view .virtual-flow .scroll-bar:vertical,
 .table-view .virtual-flow .scroll-bar:vertical .track,
 .table-view .virtual-flow .scroll-bar:vertical .track-background,
@@ -174,30 +174,237 @@
     -fx-background-color: transparent;
 }
 
-.table-view .virtual-flow .scroll-bar:vertical .thumb{
-    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44, #93f9b944);
-}
-.table-view .virtual-flow .scroll-bar:horizontal .thumb {
-    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b944);
+.table-view .scroll-bar:horizontal * {
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+
+
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
 }
 
-/* Style pour la barre de recherche */
-.search-bar {
-    -fx-background-color: #FFF;
+.table-view {
+    -fx-alternate-row-fill-visible: true;
+    -fx-control-inner-background: white;
+    -fx-control-inner-background-alt: #F6F2FF;
     -fx-background-radius: 5;
-    -fx-padding: 10;
-    -fx-spacing: 10;
+    -fx-border-radius: 5;
+    -fx-selection-bar: #EDE6FF;
+    -fx-selection-bar-non-focused: #EDE6FF;
+    -fx-border-color: #ececec;
+    -fx-border-width: 1px;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 5px;
 }
 
-.search-button {
-    -fx-background-color: #736CC7;
+.table-view .column-header {
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-border-width: 0 1px 0 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-radius: 5 5 0 0;
+    -fx-padding: 0; /* Remove padding from header */
+}
+.table-column {
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #2E1274;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+
+.table-view .column-header:hover,
+.table-view .table-column-header:hover {
+    -fx-background-radius: 5 5 0 0;
+}
+
+.table-view .table-row-cell {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.table-view .corner {
+    -fx-background-radius: 0 0 5 5;
+    -fx-border-radius: 0 0 5 5;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb {
+    -fx-background-color:  linear-gradient(to bottom, #23dfa544, #66ffa544);
+}
+
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #23dfa544, #66ffa544);
+}
+
+.pagination .pagination-control .button, .pagination .toggle-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+}
+
+.pagination .pagination-control .toggle-button:selected {
+    -fx-background-color: #232E3C;
     -fx-text-fill: white;
-    -fx-padding: 8 20;
+    -fx-background-radius: 50%;
+}
+
+.pagination .pagination-control .toggle-button:hover, .pagination .button:hover {
+    -fx-background-color: #232E3C;
+    -fx-text-fill: white;
+    -fx-background-radius: 50%;
+    -fx-cursor: hand;
+}
+
+.pagination .pagination-control .left-arrow, .right-arrow {
+    -fx-background-color: #00374f;
+}
+
+.pagination .label {
+    -fx-text-fill: #00374f;
+}
+
+
+
+
+/* Style général de l'alerte */
+.dialog-pane {
+    -fx-background-color: #F6F2FF;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-spacing: 20;
+    -fx-font-family: 'Poppins Regular';
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #2E1274;
+}
+
+.dialog-pane .text-field {
+    -fx-background-color: #FFF;
+    -fx-pref-height: 35px;
+    -fx-font-size: 1.2em;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 10, 0.1, 0, 0.5);
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent
+}
+
+/* Style pour le contenu de l'alerte */
+.dialog-pane .content {
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+}
+
+/* Style pour les boutons de l'alerte */
+.dialog-pane .button-bar .button {
+    -fx-background-color: #3E1999;
+    -fx-text-fill: white;
+    -fx-padding: 10 20 ;
     -fx-font-size: 14px;
     -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 15, 0, 0, 2);
 }
 
-.icon {
-    -fx-fill: #FFF;
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #3B1A91;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0, 0, 4);
+}
+
+.dialog-pane .button-bar .button:pressed {
+    -fx-background-color: #2E1274;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, -2);
+}
+
+/* Style général pour les alertes */
+/* Style général pour les alertes */
+.alert {
+    -fx-background-color: #e9ecef; /* Couleur de fond similaire à Bootstrap */
+    -fx-text-fill: #0c5460; /* Couleur du texte */
+    -fx-padding: 15px 20px; /* Padding pour l'espacement intérieur */
+    -fx-background-radius: 4px; /* Coins arrondis */
+    -fx-border-radius: 4px; /* Coins arrondis pour la bordure */
+    -fx-border-color: #bee5eb; /* Couleur de la bordure */
+    -fx-border-width: 1px; /* Largeur de la bordure */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2); /* Ombre portée */
+    -fx-font-family: 'Poppins Regular', sans-serif; /* Police de caractères */
+    -fx-font-size: 14px; /* Taille de la police */
+}
+
+/* Variations de couleur pour différents types d'alertes */
+.alert-info {
+    -fx-background-color: #d1ecf1; /* Fond bleu clair pour info */
+    -fx-border-color: #bee5eb; /* Bordure bleu clair */
+    -fx-text-fill: #0c5460; /* Texte bleu foncé */
+}
+
+.alert-success {
+    -fx-background-color: #d4edda; /* Fond vert clair pour succès */
+    -fx-border-color: #c3e6cb; /* Bordure vert clair */
+    -fx-text-fill: #155724; /* Texte vert foncé */
+}
+
+.alert-warning {
+    -fx-background-color: #fff3cd; /* Fond jaune clair pour avertissement */
+    -fx-border-color: #ffeeba; /* Bordure jaune clair */
+    -fx-text-fill: #856404; /* Texte jaune foncé */
+}
+
+.alert-error {
+    -fx-background-color: #f8d7da; /* Fond rouge clair pour erreur */
+    -fx-border-color: #f5c6cb; /* Bordure rouge clair */
+    -fx-text-fill: #721c24; /* Texte rouge foncé */
+}
+
+/* Optionnel : style pour le texte gras (par exemple, les titres dans l'alerte) */
+.alert .alert-heading {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-margin-bottom: 0;
+    -fx-text-fill: inherit; /* Conserver la couleur du texte */
+}
+
+.dialog-pane .error-label {
+    -fx-text-fill: red;
+}
+
+
+/* Style pour la ComboBox entière */
+.combo-box {
+    -fx-background-color: #FFF;
+    -fx-pref-height: 35px;
+    -fx-font-size: 1.2em;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.2, 0, 1);
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+}
+
+/* Style pour la liste déroulante */
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent; /* Couleur de fond des éléments de la liste */
+    -fx-text-fill: #2E1274; /* Couleur du texte des éléments de la liste */
+}
+
+/* Style pour un élément sélectionné dans la liste */
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #EDE6FF; /* Couleur de fond de l'élément sélectionné */
+}
+
+/* Style pour la partie du bouton de la ComboBox */
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* Couleur de fond du bouton flèche */
+    -fx-text-fill: #ffffff; /* Couleur du texte du bouton flèche */
 }
 
