@@ -4,16 +4,16 @@
 
 <BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.yb.digilib.Controllers.MainController">
+            fx:controller="com.yb.digilib.controller.MainController">
 
     <!-- Sidebar menu included on the left -->
     <left>
-        <fx:include source="layout/dashboard/sidebarMenu.fxml"/>
+        <fx:include source="layout/sidebar.fxml"/>
     </left>
 
     <!-- Main dashboard overview included in the center -->
     <center>
-        <fx:include source="layout/dashboard/dashboardOverview.fxml"/>
+        <fx:include source="layout/dashboard_overview.fxml"/>
     </center>
 
 </BorderPane>

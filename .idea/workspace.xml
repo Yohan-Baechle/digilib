@@ -5,12 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adbb758b-f844-4675-bb96-dac2f11b06bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/TransactionHistoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/controller/EditBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/dao/BookDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/database/DatabaseSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/edit_book.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/sidebar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/users_management.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styles/sidebarMenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/transactionsHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/transactionsHistory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/BooksManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/controller/BooksManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/LoansManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/controller/LoansManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MembersManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/controller/UsersManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/controller/SidebarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/controller/OverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/Layout/TransactionHistoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Models/AppModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/model/AppModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yb/digilib/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yb/digilib/view/ViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/booksManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/books_management.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/dashboardOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard_overview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/loansManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/layout/loans_management.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/membersManagement.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/sidebarMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard/transactionsHistory.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/layout/login/loginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/dashboardOverview.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dashboardOverview.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dashboard/sidebarMenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/login/login.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,17 +91,22 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER-9\Desktop\digilib\src\main\resources\fxml\layout" />
+      <recent name="C:\Users\USER-9\Desktop\digilib\src\main\resources\styles" />
       <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
       <recent name="$PROJECT_DIR$/src/main/resources/fxml/layout/dashboard" />
       <recent name="$PROJECT_DIR$/src/main/resources/fxml/layout/login" />
-      <recent name="$PROJECT_DIR$/src/main/resources/styles/dashboard" />
-      <recent name="$PROJECT_DIR$/src/main/resources/styles/login" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,11 +160,30 @@
       <workItem from="1723382542162" duration="6000" />
       <workItem from="1723453907774" duration="10000" />
       <workItem from="1723453976198" duration="11123000" />
-      <workItem from="1723470887318" duration="1588000" />
+      <workItem from="1723470887318" duration="3456000" />
+      <workItem from="1723532043132" duration="15000" />
+      <workItem from="1723544279540" duration="5620000" />
+      <workItem from="1723558293599" duration="3393000" />
+      <workItem from="1723615560904" duration="1710000" />
+      <workItem from="1723628877826" duration="37000" />
+      <workItem from="1723628925488" duration="294000" />
+      <workItem from="1723629229050" duration="1435000" />
+      <workItem from="1723630685504" duration="99000" />
+      <workItem from="1723630792058" duration="1769000" />
+      <workItem from="1723637890925" duration="31000" />
+      <workItem from="1723638164832" duration="4000" />
+      <workItem from="1724066227176" duration="2738000" />
+      <workItem from="1724074964817" duration="5184000" />
+      <workItem from="1724133139977" duration="31295000" />
+      <workItem from="1724165783757" duration="113000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.yb.digilib;
 
-import com.yb.digilib.Models.AppModel;
+import com.yb.digilib.model.AppModel;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -19,7 +19,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         // Display the login window when the application starts
-        AppModel.getInstance().getViewFactory().showLoginWindow();
+        AppModel.getInstance().getViewFactory().showMainWindow();
     }
 
     /**

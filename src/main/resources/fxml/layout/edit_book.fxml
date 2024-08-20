@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<DialogPane fx:id="dialogPane" prefHeight="480.0" prefWidth="640.0" stylesheets="@../../styles/global.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.controller.EditBookController">
+
+    <content>
+        <GridPane hgap="10" vgap="10.0">
+            <Label text="Titre :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="titleField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" />
+            <Label fx:id="titleErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Auteur :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="authorField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+            <Label fx:id="authorErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Genre :" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <ComboBox fx:id="genreComboBox" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="genreErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <Label text="Année :" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="yearField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
+            <Label fx:id="yearErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <Label text="Quantité :" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <TextField fx:id="quantityField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" />
+            <Label fx:id="quantityErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+            <columnConstraints>
+                <ColumnConstraints minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10" prefWidth="100" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </content>
+
+    <buttonTypes>
+        <ButtonType fx:id="saveButtonType" buttonData="OK_DONE" text="Sauvegarder" />
+        <ButtonType fx:id="cancelButtonType" buttonData="CANCEL_CLOSE" text="Annuler" />
+    </buttonTypes>
+</DialogPane>
