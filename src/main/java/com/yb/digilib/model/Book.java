@@ -1,10 +1,13 @@
 package com.yb.digilib.model;
 
 import javafx.beans.property.*;
+import java.io.Serializable;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Book {
+public class Book implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private static final AtomicInteger idCounter = new AtomicInteger(0);
 
     private final IntegerProperty id; // Auto-incremented ID

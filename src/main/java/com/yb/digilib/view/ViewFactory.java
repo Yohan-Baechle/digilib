@@ -14,9 +14,8 @@ import java.io.IOException;
  */
 public class ViewFactory {
     private final StringProperty selectedMenuItem;
-    private AnchorPane overviewView;
+    private AnchorPane usersManagementView;
     private AnchorPane booksManagementView;
-    private AnchorPane membersManagementView;
     private AnchorPane loansManagementView;
 
     /**
@@ -35,22 +34,6 @@ public class ViewFactory {
         return selectedMenuItem;
     }
 
-    /**
-     * Lazily loads and returns the overview view.
-     * If the view has already been loaded, returns the cached view.
-     *
-     * @return the overview view.
-     */
-    public AnchorPane getOverviewView() {
-        if (overviewView == null) {
-            try {
-                overviewView = new FXMLLoader(getClass().getResource("/fxml/layout/dashboard_overview.fxml")).load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return overviewView;
-    }
 
     /**
      * Lazily loads and returns the members management view.
@@ -59,14 +42,14 @@ public class ViewFactory {
      * @return the members management view.
      */
     public AnchorPane getUsersManagementView() {
-        if (membersManagementView == null) {
+        if (usersManagementView == null) {
             try {
-                membersManagementView = new FXMLLoader(getClass().getResource("/fxml/layout/users_management.fxml")).load();
+                usersManagementView = new FXMLLoader(getClass().getResource("/fxml/layout/users_management.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        return membersManagementView;
+        return usersManagementView;
     }
 
     /**
@@ -131,7 +114,7 @@ public class ViewFactory {
         stage.setScene(scene);
         stage.setTitle("DIGILIB");
         stage.setResizable(resizable);
-        stage.sizeToScene(); // Adjusts the stage size to fit its content
+        stage.sizeToScene();
         stage.setWidth(width);
         stage.setHeight(height);
         stage.show();

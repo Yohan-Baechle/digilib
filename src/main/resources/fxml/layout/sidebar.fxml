@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane prefHeight="800" prefWidth="280.0" styleClass="main-menu-container" stylesheets="@../../styles/sidebarMenu.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.controller.SidebarController">
+<AnchorPane prefHeight="800" prefWidth="280.0" styleClass="main-menu-container" stylesheets="@../../styles/sidebarMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.controller.SidebarController">
 
 
     <!-- Main container for the entire sidebar menu -->
@@ -17,20 +17,13 @@
 
         <!-- Title container with logo and app name -->
         <HBox prefHeight="100.0" styleClass="title-container">
-            <FontIcon iconLiteral="mdal-library_books" iconSize="48" styleClass="icon-primary" />
+            <FontIcon iconLiteral="mdal-library_books" iconSize="48" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIGILIB" />
         </HBox>
 
 
         <!-- Navigation section for different views -->
         <VBox styleClass="menu-container">
-            <Button fx:id="dashboardBtn" maxWidth="Infinity" mnemonicParsing="false" text="Tableau de bord" VBox.vgrow="NEVER">
-                <graphic>
-                    <FontIcon iconLiteral="mdoal-dashboard" iconSize="24" />
-                </graphic>
-            </Button>
-            <!-- Separator between the navigation and account sections -->
-            <Line endX="240.0" styleClass="separator" VBox.vgrow="ALWAYS" />
             <Button fx:id="manageUsersBtn" maxWidth="Infinity" mnemonicParsing="false" text="Gestion des membres" VBox.vgrow="NEVER">
                 <graphic>
                     <FontIcon iconLiteral="mdral-group" iconSize="24" />
