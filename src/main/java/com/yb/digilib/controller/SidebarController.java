@@ -12,7 +12,6 @@ import java.util.ResourceBundle;
  * It handles user interactions with the menu buttons and updates the main view accordingly.
  */
 public class SidebarController implements Initializable {
-    public Button dashboardBtn;
     public Button manageBooksBtn;
     public Button manageUsersBtn;
     public Button loansReturnsBtn;
@@ -29,30 +28,21 @@ public class SidebarController implements Initializable {
 
         updateSelectedMenu(AppModel.getInstance().getViewFactory().getSelectedMenuItem().get());
 
-        // Écoute les changements de menu pour mettre à jour l'interface
+        // Listen for changes in the selected menu item to update the interface
         AppModel.getInstance().getViewFactory().getSelectedMenuItem().addListener((observable, oldValue, newValue) -> updateSelectedMenu(newValue));
-
-}
+    }
 
     /**
      * Adds event listeners to the menu buttons. Each listener updates the selected menu item in the ViewFactory.
      */
     private void addListeners() {
-        dashboardBtn.setOnAction(event -> onDashboard());
-        manageBooksBtn.setOnAction(event -> onBooksManagement());
         manageUsersBtn.setOnAction(event -> onUsersManagement());
+        manageBooksBtn.setOnAction(event -> onBooksManagement());
         loansReturnsBtn.setOnAction(event -> onLoansManagement());
     }
 
     /**
-     * Sets the selected menu item to "overview", which triggers the display of the dashboard view.
-     */
-    private void onDashboard() {
-        AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("dashboardOverview");
-    }
-
-     /**
-     * Sets the selected menu item to "membersManagement", which triggers the display of the members management view.
+     * Sets the selected menu item to "usersManagement", which triggers the display of the users management view.
      */
     private void onUsersManagement() {
         AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("usersManagement");
@@ -72,18 +62,19 @@ public class SidebarController implements Initializable {
         AppModel.getInstance().getViewFactory().getSelectedMenuItem().set("loansManagement");
     }
 
+    /**
+     * Updates the menu buttons' styles based on the selected menu item.
+     *
+     * @param selectedMenu The identifier for the selected menu item.
+     */
     private void updateSelectedMenu(String selectedMenu) {
-        // Supprime la classe 'button-selected' de tous les boutons
-        dashboardBtn.getStyleClass().remove("button-selected");
+        // Remove 'button-selected' class from all buttons
         manageUsersBtn.getStyleClass().remove("button-selected");
         manageBooksBtn.getStyleClass().remove("button-selected");
         loansReturnsBtn.getStyleClass().remove("button-selected");
 
-        // Ajoute la classe 'button-selected' au bouton correspondant
+        // Add 'button-selected' class to the corresponding button
         switch (selectedMenu) {
-            case "dashboardOverview":
-                dashboardBtn.getStyleClass().add("button-selected");
-                break;
             case "usersManagement":
                 manageUsersBtn.getStyleClass().add("button-selected");
                 break;

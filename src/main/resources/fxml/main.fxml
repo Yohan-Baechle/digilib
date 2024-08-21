@@ -13,7 +13,7 @@
 
     <!-- Main dashboard overview included in the center -->
     <center>
-        <fx:include source="layout/dashboard_overview.fxml"/>
+        <fx:include source="layout/users_management.fxml"/>
     </center>
 
 </BorderPane>

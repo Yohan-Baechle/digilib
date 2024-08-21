@@ -26,15 +26,14 @@ public class MainController implements Initializable {
         // Listen for changes in the selected menu item and update the view accordingly
         AppModel.getInstance().getViewFactory().getSelectedMenuItem().addListener((observable, oldValue, newValue) -> {
             switch (newValue) {
-                case "dashboardOverview" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getOverviewView());
-                case "booksManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getBooksManagementView());
                 case "usersManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getUsersManagementView());
+                case "booksManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getBooksManagementView());
                 case "loansManagement" -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getLoansManagementView());
-                default -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getOverviewView());
+                default -> mainPane.setCenter(AppModel.getInstance().getViewFactory().getUsersManagementView());
             }
         });
 
         // Set the default view to the overview when the application starts
-        mainPane.setCenter(AppModel.getInstance().getViewFactory().getOverviewView());
+        mainPane.setCenter(AppModel.getInstance().getViewFactory().getUsersManagementView());
     }
 }

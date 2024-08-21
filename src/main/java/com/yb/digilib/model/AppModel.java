@@ -16,7 +16,7 @@ public class AppModel {
      */
     private AppModel() {
         this.viewFactory = new ViewFactory();
-        this.viewFactory.getSelectedMenuItem().set("dashboardOverview");
+        this.viewFactory.getSelectedMenuItem().set("usersManagement");
     }
 
 

@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane prefHeight="800" prefWidth="920" styleClass="main-container" stylesheets="@../../styles/global.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.controller.BooksManagementController">
+<AnchorPane prefHeight="800" prefWidth="920" styleClass="main-container" stylesheets="@../../styles/global.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.controller.BooksManagementController">
     <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0" AnchorPane.leftAnchor="40.0"
           AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
         <FontIcon iconLiteral="mdomz-menu_book" iconSize="30"/>

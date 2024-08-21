@@ -29,7 +29,7 @@
 }
 
 
-Label, TextField, TextArea, Text {
+Label, TextField, TextArea, Text, Button, ComboBox, ListView, TableView, CheckBox, RadioButton, MenuItem {
     -fx-font-family: 'Poppins Regular';
     -fx-text-fill: #333;
 }
@@ -83,6 +83,29 @@ Button {
 
 .button-success FontIcon {
     -fx-fill: white;
+}
+
+.button-info {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-padding: 4 8;
+    -fx-font-size: 16px;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0, 0, 0.5);
+}
+
+.button-info FontIcon {
+    -fx-fill: white;
+}
+
+.button-info:hover {
+    -fx-background-color: #1E88E5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+
+.button-info:pressed {
+    -fx-background-color: #1976D2;
 }
 
 .button-success:hover {
@@ -275,11 +298,16 @@ Button {
 
 /* Style général de l'alerte */
 .dialog-pane {
-    -fx-background-color: #F6F2FF;
+    -fx-background-color: #f4f4f4;
     -fx-border-color: white;
     -fx-border-width: 2;
     -fx-spacing: 20;
     -fx-font-family: 'Poppins Regular';
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #F6F2FF;
+    -fx-font-weight: bold;
 }
 
 .dialog-pane .label {
@@ -291,7 +319,7 @@ Button {
     -fx-pref-height: 35px;
     -fx-font-size: 1.2em;
     -fx-padding: 5;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 10, 0.1, 0, 0.5);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.02), 10, 0, 0, 0.5);
     -fx-border-radius: 5;
     -fx-background-radius: 5;
     -fx-border-color: transparent
@@ -326,85 +354,81 @@ Button {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, -2);
 }
 
-/* Style général pour les alertes */
+.dialog-pane .error-label {
+    -fx-text-fill: red;
+}
+
+.combo-box {
+    -fx-background-color: #FFF;
+    -fx-font-size: 1.2em;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.02), 10, 0, 0, 0.5);
+}
+
 /* Style général pour les alertes */
 .alert {
-    -fx-background-color: #e9ecef; /* Couleur de fond similaire à Bootstrap */
-    -fx-text-fill: #0c5460; /* Couleur du texte */
-    -fx-padding: 15px 20px; /* Padding pour l'espacement intérieur */
-    -fx-background-radius: 4px; /* Coins arrondis */
-    -fx-border-radius: 4px; /* Coins arrondis pour la bordure */
-    -fx-border-color: #bee5eb; /* Couleur de la bordure */
-    -fx-border-width: 1px; /* Largeur de la bordure */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2); /* Ombre portée */
-    -fx-font-family: 'Poppins Regular', sans-serif; /* Police de caractères */
-    -fx-font-size: 14px; /* Taille de la police */
+    -fx-background-color: #e9ecef;
+    -fx-text-fill: #0c5460;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #bee5eb;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-font-family: 'Poppins Regular';
+    -fx-font-size: 14px;
 }
 
 /* Variations de couleur pour différents types d'alertes */
 .alert-info {
-    -fx-background-color: #d1ecf1; /* Fond bleu clair pour info */
-    -fx-border-color: #bee5eb; /* Bordure bleu clair */
-    -fx-text-fill: #0c5460; /* Texte bleu foncé */
+    -fx-background-color: #d1ecf1;
+    -fx-border-color: #bee5eb;
+    -fx-text-fill: #0c5460;
 }
 
 .alert-success {
-    -fx-background-color: #d4edda; /* Fond vert clair pour succès */
-    -fx-border-color: #c3e6cb; /* Bordure vert clair */
-    -fx-text-fill: #155724; /* Texte vert foncé */
+    -fx-background-color: #d4edda;
+    -fx-border-color: #c3e6cb;
+    -fx-text-fill: #155724;
 }
 
 .alert-warning {
-    -fx-background-color: #fff3cd; /* Fond jaune clair pour avertissement */
-    -fx-border-color: #ffeeba; /* Bordure jaune clair */
-    -fx-text-fill: #856404; /* Texte jaune foncé */
+    -fx-background-color: #fff3cd;
+    -fx-border-color: #ffeeba;
+    -fx-text-fill: #856404;
 }
 
 .alert-error {
-    -fx-background-color: #f8d7da; /* Fond rouge clair pour erreur */
-    -fx-border-color: #f5c6cb; /* Bordure rouge clair */
-    -fx-text-fill: #721c24; /* Texte rouge foncé */
+    -fx-background-color: #f8d7da;
+    -fx-border-color: #f5c6cb;
+    -fx-text-fill: #721c24;
 }
 
 /* Optionnel : style pour le texte gras (par exemple, les titres dans l'alerte) */
 .alert .alert-heading {
     -fx-font-size: 16px;
     -fx-font-weight: bold;
-    -fx-margin-bottom: 0;
-    -fx-text-fill: inherit; /* Conserver la couleur du texte */
+    -fx-padding: 0 0 10 0;
+    -fx-text-fill: inherit;
 }
 
-.dialog-pane .error-label {
-    -fx-text-fill: red;
-}
-
-
-/* Style pour la ComboBox entière */
-.combo-box {
-    -fx-background-color: #FFF;
-    -fx-pref-height: 35px;
-    -fx-font-size: 1.2em;
-    -fx-padding: 5;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.2, 0, 1);
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-border-color: transparent;
-}
 
 /* Style pour la liste déroulante */
 .combo-box-popup .list-cell {
-    -fx-background-color: transparent; /* Couleur de fond des éléments de la liste */
-    -fx-text-fill: #2E1274; /* Couleur du texte des éléments de la liste */
+    -fx-background-color: transparent;
+    -fx-text-fill: #2E1274;
 }
 
 /* Style pour un élément sélectionné dans la liste */
 .combo-box-popup .list-cell:filled:selected {
-    -fx-background-color: #EDE6FF; /* Couleur de fond de l'élément sélectionné */
+    -fx-background-color: #EDE6FF;
 }
 
 /* Style pour la partie du bouton de la ComboBox */
 .combo-box .arrow-button {
-    -fx-background-color: transparent; /* Couleur de fond du bouton flèche */
-    -fx-text-fill: #ffffff; /* Couleur du texte du bouton flèche */
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
 }
 
