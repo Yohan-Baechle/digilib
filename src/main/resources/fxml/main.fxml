@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.yb.digilib.controller.MainController">
+
+    <!-- Sidebar menu included on the left -->
+    <left>
+        <fx:include source="layout/sidebar.fxml"/>
+    </left>
+
+    <!-- Main dashboard overview included in the center -->
+    <center>
+        <fx:include source="layout/users_management.fxml"/>
+    </center>
+
+</BorderPane>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<DialogPane fx:id="dialogPane" prefHeight="420.0" prefWidth="640.0" stylesheets="@../../styles/global.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yb.digilib.controller.EditLoanController">
+
+    <content>
+        <GridPane hgap="10" vgap="10.0">
+            <Label text="Utilisateur :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ComboBox fx:id="userComboBox" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label fx:id="userErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Livre :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <ComboBox fx:id="bookComboBox" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="bookErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Date d'emprunt :" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+            <Label fx:id="startDateErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <Label text="Date de retour :" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <DatePicker fx:id="endDatePicker" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
+            <Label fx:id="endDateErrorLabel" styleClass="error-label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <columnConstraints>
+                <ColumnConstraints minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10" prefWidth="100" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </content>
+
+    <buttonTypes>
+        <ButtonType fx:id="saveButtonType" buttonData="OK_DONE" text="Sauvegarder" />
+        <ButtonType fx:id="cancelButtonType" buttonData="CANCEL_CLOSE" text="Annuler" />
+    </buttonTypes>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</DialogPane>
